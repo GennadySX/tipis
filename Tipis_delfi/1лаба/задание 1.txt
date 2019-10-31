@@ -1,0 +1,327 @@
+program laba1; 
+
+{$APPTYPE CONSOLE} 
+
+uses 
+Windows, 
+SysUtils; 
+
+Type 
+TRectangle = class(TObject) 
+x1, y1, x2, y2, x3, y3:integer; 
+constructor CreateA(x1_, y1_, x2_,y2_:integer); 
+constructor CreateB; 
+destructor Destroy; 
+function Perimeter: integer; 
+function Area: integer; 
+procedure Verify; 
+procedure Show; 
+procedure Paint; 
+procedure Centr; 
+procedure sinus; 
+end; 
+
+constructor TRectangle.CreateA(x1_, y1_, x2_,y2_:integer); 
+begin 
+SetConsoleCP(1251); 
+SetConsoleOutPutCP(1251); 
+inherited Create; 
+x1:= x1_; x2:= x2_; y1:= y1_; y2:= y2_; 
+end; 
+
+constructor TRectangle.CreateB; 
+begin 
+Writeln('Введите координаты вершин прямоугольника:'); 
+Write('X1 = '); readln(x1); 
+Write('Y1 = '); readln(y1); 
+Write('X2 = '); readln(x2); 
+Write('Y2 = '); readln(y2); 
+end; 
+
+destructor TRectangle.Destroy; 
+begin 
+inherited Destroy; 
+end; 
+
+function TRectangle.Perimeter; 
+begin 
+Perimeter:= 2*(abs(x1-x2)+abs(y1-y2)); 
+end; 
+
+function TRectangle.Area; 
+begin 
+Area:= abs(x1-x2)* abs(y1-y2); 
+end; 
+
+procedure TRectangle.Verify; 
+begin 
+Writeln('Введите координаты точки для проверки попадания в фигуру:'); 
+Write('X = ');Readln(x3); 
+Write('Y = ');Readln(y3); 
+If (x3>=x1) and (x3<=x2) and (y3>=y1) and (y3<=y2) 
+then Writeln('Данная точка находится внутри фигуры.') 
+else Writeln('Данная точка не находится внутри фигуры.'); 
+Writeln; 
+end; 
+
+procedure TRectangle.Show; 
+begin 
+Writeln('Координаты вершин прямоугольника:'); 
+Writeln('Координаты левого нижнего угла = [',x1,',',y1,']'); 
+Writeln('Координаты левого верхнего угла = [',x1,',',y2,']'); 
+Writeln('Координаты правого нижнего угла = [',x2,',',y1,']'); 
+Writeln('Координаты правого верхнего угла = [',x2,',',y2,']'); 
+Writeln('Периметр фигуры равен =',Perimeter); 
+Writeln('Площадь фигуры равна =',Area); 
+end; 
+
+
+
+procedure TRectangle.Paint; 
+var i, j, n, k:integer; 
+begin 
+Writeln('Вывод размера прямоугольника: '); 
+j:=trunc(y2-y1); 
+n:=trunc(x2-x1); 
+for i:= 1 to j do 
+begin 
+for k:= 1 to n do 
+begin 
+Write('[]'); 
+end; 
+WriteLn; 
+end; 
+end; 
+
+procedure TRectangle.Centr; 
+
+var x_1,x_2,y_1,y_2,xc,yc:integer; 
+begin 
+writeln('Введите координаты прямоугольника: '); 
+write('X1= '); 
+readln(x_1); 
+write('Y1= '); 
+readln(y_1); 
+write('X2= '); 
+readln(x_2); 
+write('Y2= '); 
+readln(y_2); 
+x_2:=x_2-x_1; 
+y_2:=y_2-y_1; 
+xc:=x_2 div 2; 
+yc:=Y_2 div 2; 
+xc:=xc+x_1; 
+yc:=yc+y_1; 
+writeln('Координата центральной точки данного прямоугольника = '); 
+Writeln('x= ',xc); 
+writeln('y= ',yc); 
+end; 
+
+Procedure TRectangle.Sinus; 
+var sin,p,p1:real; 
+begin 
+p:=x2-x1; 
+p1:=y2-y1; 
+p:=Sqrt(sqr(p)+sqr(p1)); 
+sin:=(y2-y1)/p; 
+Writeln('Синус наиострейшего угла после проведения диагонали = ',sin); 
+end; 
+
+
+
+Var RcA, RcB: TRectangle; 
+
+begin 
+{ TODO -oUser -cConsole Main : Insert code here } 
+SetConsoleCP(1251); 
+SetConsoleOutputCP(1251); 
+
+Writeln('Характеристики прямоугольника из конструктора A!'); 
+RcA:= TRectangle.CreateA(0,0,5,10); 
+RcA.Show; 
+Writeln; 
+RcA.Verify; 
+RcA.Centr; 
+
+Writeln('Создание прямоугольника вторым конструктором!'); 
+RcB:= TRectangle.CreateB; 
+RcB.Show; 
+Writeln; 
+RcB.Verify; 
+RcB.Paint; 
+RcB.Sinus; 
+RcA.Destroy; 
+RcB.Destroy; 
+Writeln('Нажмите Enter для завершения работы...'); 
+readln; 
+end.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+program laba1;
+
+{$APPTYPE CONSOLE}
+
+uses
+  Windows,
+  SysUtils;
+
+Type
+  TRectangle = class(TObject)
+  x1, y1, x2, y2:integer;
+  constructor CreateA(x1_, y1_, x2_,y2_:integer);
+  constructor CreateB;
+  destructor Destroy;
+  function Perimeter: integer;
+  function Area: integer;
+  procedure Verify;
+  procedure Show;
+  procedure Centr;
+  procedure sinus;
+end;
+
+constructor TRectangle.CreateA(x1_, y1_, x2_,y2_:integer);
+begin
+  inherited Create;
+  x1:= x1_; x2:= x2_; y1:= y1_; y2:= y2_;
+end;
+
+constructor TRectangle.CreateB;
+begin
+  Writeln('Aaaaeoa eii?aeiaou aaiiiai i?yiioaieuieea:');
+  Write('X1 = '); readln(x1);
+  Write('Y1 = '); readln(y1);
+  Write('X2 = '); readln(x2);
+  Write('Y2 = '); readln(y2);
+end;
+
+destructor TRectangle.Destroy;
+begin 
+  inherited Destroy;
+end; 
+
+function TRectangle.Perimeter; 
+begin
+  Perimeter:= 2*(abs(x1-x2)+abs(y1-y2));
+end;
+
+function TRectangle.Area; 
+begin
+  Area:= abs(x1-x2)* abs(y1-y2);
+end; 
+
+procedure TRectangle.Verify;
+var x3, y3:integer;
+begin
+  Writeln('Aaaaeoa eii?aeiaou oi?ee ,?oiau i?iaa?eou iiiaaaao ee iia a iao i?yiioaieuiee:');
+  Write('X = ');Readln(x3);
+  Write('Y = ');Readln(y3);
+  If (x3>=x1) and (x3<=x2) and (y3>=y1) and (y3<=y2) then Writeln('Aaiiay oi?ea iiiaaaao a i?yiioaieuiee.')
+                                                     else Writeln('Aaiiay oi?ea ia iiiaaaao a i?yiioaieuiee.');
+  Writeln;
+end; 
+
+procedure TRectangle.Show; 
+begin
+  Writeln('Eii?aeiaou aa?oei i?yiioaieuieea:');
+  Writeln('Eii?aeiaou eaaiai ie?iaai oaea i?yiioaieuieea = (',x1,',',y1,')');
+  Writeln('Eii?aeiaou i?aaiai aa?oiaai oaea i?yiioaieuieea = (',x2,',',y2,')');
+  Writeln('Ieiuaau i?yiiioaieuieea ?aaia =',Area);
+  Writeln('Ia?eiao? i?yiioaieuieea ?aaai =',Perimeter);
+
+end;
+
+procedure TRectangle.Centr; 
+var x_1,x_2,y_1,y_2:integer;
+xc,yc:real;
+begin
+  writeln('Aaaaeoa eii?aeiaou i?yiioaieuieea: ');
+  write('X1= '); readln(x_1);
+  write('Y1= '); readln(y_1);
+  write('X2= '); readln(x_2);
+  write('Y2= '); readln(y_2);
+  x_2:=x_2-x_1;
+  y_2:=y_2-y_1;
+  xc:=x_2/2;
+  yc:=Y_2/2;
+  xc:=xc+x_1;
+  yc:=yc+y_1;
+  writeln('Eii?aeiaou oaio?aeuiie oi?ee = (',xc:5:3,';',yc:5:3,')');
+end;
+
+Procedure TRectangle.Sinus; 
+var sina,p,p1:real;
+begin 
+  p:=x2-x1;
+  p1:=y2-y1;
+  p:=Sqrt(sqr(p)+sqr(p1));
+  sina:=(y2-y1)/p;
+  Writeln('Neion naiiai ino?iai oaea  = ',sina:5:3); //iinea i?iaaaaiey aeaaiiaee
+end; 
+
+
+Var RcA, RcB: TRectangle; 
+
+begin 
+{ TODO -oUser -cConsole Main : Insert code here }
+  SetConsoleCP(1251);
+  SetConsoleOutputCP(1251);
+
+  Writeln('Iienaiea ia?aiai eiino?oeoi?a (A)');
+  RcA:= TRectangle.CreateA(0,0,8,13);
+  RcA.Show;
+  Writeln;
+  RcA.Verify;
+  RcA.Centr;
+
+  Writeln('Nicaaiea i?yiioaieuieea aoi?ui eiino?oeoi?ii (A)');
+  RcB:= TRectangle.CreateB;
+  RcB.Show;
+  Writeln;
+  RcB.Verify;
+  RcB.Sinus;
+  
+  RcA.Destroy;
+  RcB.Destroy;
+  readln;
+end.

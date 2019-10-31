@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.bdsproj,C:\Users\User\Desktop\14laba\Project1.bdsproj=C:\Users\User\Documents\Borland Studio Projects\Project1.bdsproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.bdsproj,C:\Users\User\Desktop\14laba\Project1.bdsproj=C:\Users\User\Desktop\14laba\Project1.bdsproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.bdsproj,C:\Users\User\Desktop\14laba\Project1.bdsproj=C:\Users\User\Desktop\14laba\Project1.bdsproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\User\Desktop\14laba\Unit1.dfm=C:\Users\User\Documents\Borland Studio Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\User\Desktop\14laba\Unit1.pas=C:\Users\User\Documents\Borland Studio Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\User\Desktop\14laba\Unit2.pas=C:\Users\User\Documents\Borland Studio Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\User\Desktop\14laba\Unit2.dfm=C:\Users\User\Documents\Borland Studio Projects\Unit2.dfm</Transaction>
+    <Transaction>2019.10.31 01:08:32.956,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\14laba\MDI.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\14laba\Unit1.pas</Transaction>
+    <Transaction>2019.10.31 01:08:32.956,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\14laba\MDI.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\14laba\Unit1.dfm</Transaction>
+    <Transaction>2019.10.31 01:08:41.869,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\14laba\Unit2.pas=</Transaction>
+    <Transaction>2019.10.31 01:10:33.670,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\KS\14\MDI.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\14laba\MDI.dfm</Transaction>
+    <Transaction>2019.10.31 01:10:33.670,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\KS\14\MDI.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\14laba\MDI.pas</Transaction>
+  </Transactions>
+</BorlandProject>

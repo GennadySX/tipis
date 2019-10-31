@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\User\Desktop\картинки\Unit1.pas=C:\Users\User\Documents\Borland Studio Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.bdsproj,C:\Users\User\Desktop\картинки\Project12.bdsproj=C:\Users\User\Documents\Borland Studio Projects\Project1.bdsproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\User\Desktop\картинки\Unit1.dfm=C:\Users\User\Documents\Borland Studio Projects\Unit1.dfm</Transaction>
+    <Transaction>2019.10.30 23:41:26.944,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\12лаба\Unit2.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\12лаба\Unit1.dfm</Transaction>
+    <Transaction>2019.10.30 23:41:26.944,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\12лаба\Unit2.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\12лаба\Unit1.pas</Transaction>
+    <Transaction>2019.10.30 23:42:57.125,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\12лаба\Unitx.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\12лаба\Unit2.dfm</Transaction>
+    <Transaction>2019.10.30 23:42:57.125,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\12лаба\Unitx.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\12лаба\Unit2.pas</Transaction>
+  </Transactions>  <ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Unitx.pas"/>
+    <File Path="Unitx.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

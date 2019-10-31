@@ -1,0 +1,127 @@
+program laba1;
+
+{$APPTYPE CONSOLE}
+
+ususes
+  Windows,
+  SysUtils;
+
+type
+  TRectangle = class(TObject)
+  x1, y1, x2, y2:integer;
+  constructor Create();
+  constructor CreateB;
+  destructor Destroy;
+  function Perimeter: integer;
+  function Area: integer;
+  procedure Verify;
+  procedure Show;
+  procedure Centr;
+  procedure sinus;
+end;
+
+constructor TRectangle.Create;
+begin
+  inherited Create;
+  x1:= x1_; x2:= x2_; y1:= y1_; y2:= y2_;
+end;
+
+constructor TRectangle.CreateB;
+begin
+  Writeln('Ââåäèòå êîîğäèíàòû äàííîãî ïğÿìîóãîëüíèêà:');
+  Write('X1 = '); readln(x1);
+  Write('Y1 = '); readln(y1);
+  Write('X2 = '); readln(x2);
+  Write('Y2 = '); readln(y2);
+end;
+
+destructor TRectangle.Destroy;
+begin 
+  inherited Destroy;
+end; 
+
+function TRectangle.Perimeter; 
+begin
+  Perimeter:= 2*(abs(x1-x2)+abs(y1-y2));
+end;
+
+function TRectangle.Area; 
+begin
+  Area:= abs(x1-x2)* abs(y1-y2);
+end; 
+
+procedure TRectangle.Verify;
+var x3, y3:integer;
+begin
+  Writeln('Ââåäèòå êîîğäèíàòû òî÷êè ,÷òîáû ïğîâåğèòü ïîïàäàåò ëè îíà â íàø ïğÿìîóãîëüíèê:');
+  Write('X = ');Readln(x3);
+  Write('Y = ');Readln(y3);
+  If (x3>=x1) and (x3<=x2) and (y3>=y1) and (y3<=y2) then Writeln('Äàííàÿ òî÷êà ïîïàäàåò â ïğÿìîóãîëüíèê.')
+                                                     else Writeln('Äàííàÿ òî÷êà íå ïîïàäàåò â ïğÿìîóãîëüíèê.');
+  Writeln;
+end; 
+
+procedure TRectangle.Show; 
+begin
+  Writeln('Êîîğäèíàòû âåğøèí ïğÿìîóãîëüíèêà:');
+  Writeln('Êîîğäèíàòû ëåâîãî íèæíåãî óãëà ïğÿìîóãîëüíèêà = (',x1,',',y1,')');
+  Writeln('Êîîğäèíàòû ïğàâîãî âåğõíåãî óãëà ïğÿìîóãîëüíèêà = (',x2,',',y2,')');
+  Writeln('Ïëîùàäü ïğÿììîóãîëüíèêà ğàâíà =',Area);
+  Writeln('Ïåğèìåòğ ïğÿìîóãîëüíèêà ğàâåí =',Perimeter);
+
+end;
+
+procedure TRectangle.Centr; 
+var x_1,x_2,y_1,y_2:integer;
+xc,yc:real;
+begin
+  writeln('Ââåäèòå êîîğäèíàòû ïğÿìîóãîëüíèêà: ');
+  write('X1= '); readln(x_1);
+  write('Y1= '); readln(y_1);
+  write('X2= '); readln(x_2);
+  write('Y2= '); readln(y_2);
+  x_2:=x_2-x_1;
+  y_2:=y_2-y_1;
+  xc:=x_2/2;
+  yc:=Y_2/2;
+  xc:=xc+x_1;
+  yc:=yc+y_1;
+  writeln('Êîîğäèíàòû öåíòğàëüíîé òî÷êè = (',xc:5:3,';',yc:5:3,')');
+end;
+
+Procedure TRectangle.Sinus; 
+var sina,p,p1:real;
+begin 
+  p:=x2-x1;
+  p1:=y2-y1;
+  p:=Sqrt(sqr(p)+sqr(p1));
+  sina:=(y2-y1)/p;
+  Writeln('Ñèíóñ ñàìîãî îñòğîãî óãëà  = ',sina:5:3); //ïîñëå ïğîâåäåíèÿ äèàãîíàëè
+end; 
+
+
+Var RcA, RcB: TRectangle; 
+
+begin 
+{ TODO -oUser -cConsole Main : Insert code here }
+  SetConsoleCP(1251);
+  SetConsoleOutputCP(1251);
+
+  Writeln('Îïèñàíèå ïåğâîãî êîíñòğóêòîğà (À)');
+  RcA:= TRectangle.CreateA(0,0,8,13);
+  RcA.Show;
+  Writeln;
+  RcA.Verify;
+  RcA.Centr;
+
+  Writeln('Ñîçäàíèå ïğÿìîóãîëüíèêà âòîğûì êîíñòğóêòîğîì (Â)');
+  RcB:= TRectangle.CreateB;
+  RcB.Show;
+  Writeln;
+  RcB.Verify;
+  RcB.Sinus;
+  
+  RcA.Destroy;
+  RcB.Destroy;
+  readln;
+end.

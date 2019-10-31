@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.bdsproj,C:\Users\User\Desktop\13laba\Project1.bdsproj=C:\Users\User\Documents\Borland Studio Projects\Project1.bdsproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\User\Desktop\13laba\Unit3.dfm=C:\Users\User\Documents\Borland Studio Projects\Unit3.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\User\Desktop\13laba\Unit2.dfm=C:\Users\User\Documents\Borland Studio Projects\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\User\Desktop\13laba\Unit3.pas=C:\Users\User\Documents\Borland Studio Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\User\Desktop\13laba\Unit1.pas=C:\Users\User\Documents\Borland Studio Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.dfm,C:\Users\User\Desktop\13laba\Unit1.dfm=C:\Users\User\Documents\Borland Studio Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.pas,C:\Users\User\Desktop\13laba\Unit2.pas=C:\Users\User\Documents\Borland Studio Projects\Unit2.pas</Transaction>
+    <Transaction>2019.10.31 00:52:21.622,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img1.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Unit1.dfm</Transaction>
+    <Transaction>2019.10.31 00:52:21.622,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img1.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Unit1.pas</Transaction>
+    <Transaction>2019.10.31 00:52:28.356,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img2.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Unit2.pas</Transaction>
+    <Transaction>2019.10.31 00:52:28.356,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img2.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Unit2.dfm</Transaction>
+    <Transaction>2019.10.31 00:52:37.500,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img3.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Unit3.pas</Transaction>
+    <Transaction>2019.10.31 00:52:37.500,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img3.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Unit3.dfm</Transaction>
+    <Transaction>2019.10.31 00:55:57.225,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\KS\Img1.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img1.dfm</Transaction>
+    <Transaction>2019.10.31 00:55:57.225,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\KS\Img1.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img1.pas</Transaction>
+    <Transaction>2019.10.31 00:56:02.738,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\KS\Img2.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img2.dfm</Transaction>
+    <Transaction>2019.10.31 00:56:02.738,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\KS\Img2.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img2.pas</Transaction>
+    <Transaction>2019.10.31 00:56:08.071,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\KS\Img3.dfm=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img3.dfm</Transaction>
+    <Transaction>2019.10.31 00:56:08.071,D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\KS\Img3.pas=D:\1.Development\2.eDucation KSRTU\PassAgain\tipis\Tipis_delfi\13laba\Img3.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,12 @@
+program Project1;
+
+uses
+  Forms,SDI,SDI2;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(SDIForm1);
+  Application.Run;
+end.

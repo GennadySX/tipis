@@ -1,0 +1,135 @@
+program Project3;
+
+{$APPTYPE CONSOLE}
+
+uses
+  Windows,
+  SysUtils;
+
+Type
+  TPoint=class(TObject)
+  x,y:integer;
+  constructor Create;
+  destructor Destroy; override;
+  procedure Show;
+  procedure Move;
+end;
+
+  TRectangle=class(TPoint)
+  Height, Width:integer;
+  function Area:integer;
+  constructor Create;
+  destructor Destroy; override;
+  procedure ChangeSize;
+  procedure Show;
+end;
+
+constructor TPoint.Create; 
+begin
+  Writeln('ВВедите координаты X и Y')
+  Write('X = ');readln(x);
+  Write('Y = ');readln(y);
+end; 
+
+constructor TRectangle.Create; 
+begin 
+  Inherited;
+  Writeln('Введите высоту и ширину:');
+  Write('Height = ');readln(Height);
+  Write('Width = ');readln(Width);
+end;
+
+destructor TPoint.Destroy;
+begin 
+  inherited Destroy;
+end; 
+
+destructor TRectangle.Destroy; 
+begin 
+  inherited Destroy;
+end; 
+
+function TRectangle.Area; 
+begin
+  Result:= Height*Width;
+end;
+
+procedure TPoint.Move; 
+var x2,y2:integer; 
+begin
+  Writeln ('Введите координаты для смещения:')
+  Write ('X2 = '); Readln(X2);
+  Write ('Y2 = '); Readln(Y2);
+  x:=x2+x; y:=y2+y; 
+end; 
+
+procedure TPoint.Show;
+begin
+  Write ('Введите координаты точки:', '( ', x ,', y ' ) ' )
+end;
+
+procedure TRectangle.Show; 
+var x1, y1: integer; i, j, n, k:integer; 
+begin 
+x1:=x+Height; y1:=y+Width; 
+j:=trunc(y1-y); 
+n:=trunc(x1-x); 
+for i:= 1 to j do 
+begin 
+for k:= 1 to n do 
+begin 
+Write('[#]');
+end;
+
+procedure TRectangle.ChangeSize;
+var Changex, Changey:integer;
+begin
+  Writeln ('Введите высоту и ширину, чтобы нрисовать прямоугольник')
+  Write ('Сhangex = '); Readln(Сhangex);
+  Write ('Changey = '); Readln(Сhangey);
+
+
+var
+  Rectangle: TRectangle;
+  Point: TPoint;
+
+begin 
+{ TODO -oUser -cConsole Main : Insert code here }
+  SetConsoleCP(1251);
+  SetConsoleOutputCP(1251);
+
+  Writeln('Создание точки!');
+  Point:=TPoint.Create;
+  Point.Show;
+  Writeln;
+
+  Writeln('Перемещёние точки!');
+  Point.Move;
+  Point.Show;
+  Writeln;
+
+  Writeln('Создание прямоугольника!');
+  Rectangle:=TRectangle.Create;
+  Rectangle.Show;
+
+  Writeln('Перемещёние прямоугольника!');
+  Rectangle.Move;
+  Rectangle.Show;
+
+  Writeln('');
+  Rectangle.ChangeSize;
+  Rectangle.Show;
+
+  Point.Destroy;
+  Rectangle.Destroy;
+  Readln;
+end.
+
+
+
+
+
+
+
+
+

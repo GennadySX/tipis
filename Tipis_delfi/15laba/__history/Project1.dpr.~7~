@@ -1,0 +1,13 @@
+program Project1;
+
+uses
+  Forms,SDI,SDI2;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TSDIForm1, SDIForm1);
+  Application.CreateForm(TSDIForm2, SDIForm2);
+  Application.Run;
+end.

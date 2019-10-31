@@ -1,0 +1,120 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, StdCtrls, ComCtrls;
+
+type
+  TForm1 = class(TForm)
+    RichEdit1: TRichEdit;
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    OpenDialog1: TOpenDialog;
+    SaveDialog1: TSaveDialog;
+    N7: TMenuItem;
+    N8: TMenuItem;
+    N10: TMenuItem;
+    FontDialog1: TFontDialog;
+    N11: TMenuItem;
+    N12: TMenuItem;
+    N9: TMenuItem;
+    N13: TMenuItem;
+    procedure N11Click(Sender: TObject);
+    procedure N5Click(Sender: TObject);
+    procedure N9Click(Sender: TObject);
+    procedure N13Click(Sender: TObject);
+    procedure N10Click(Sender: TObject);
+    procedure N12Click(Sender: TObject);
+    procedure N4Click(Sender: TObject);
+    procedure N7Click(Sender: TObject);
+    procedure N6Click(Sender: TObject);
+    procedure N2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.N10Click(Sender: TObject);
+begin
+ShowMessage('Смирнова Марина Юрьевна');
+end;
+
+procedure TForm1.N11Click(Sender: TObject);
+begin
+RichEdit1.PasteFromClipboard;
+end;
+
+procedure TForm1.N12Click(Sender: TObject);
+begin
+RichEdit1.Lines.Clear;
+end;
+
+procedure TForm1.N13Click(Sender: TObject);
+begin
+RichEdit1.Undo;
+end;
+
+procedure TForm1.N2Click(Sender: TObject);
+begin
+        if OpenDialog1.Execute then
+        RichEdit1.Lines.LoadFromFile(OpenDialog1.Filename);
+
+end;
+
+procedure TForm1.N4Click(Sender: TObject);
+begin
+  if FontDialog1.Execute then
+   RichEdit1.SelAttributes.Assign(FontDialog1.Font);
+   RichEdit1.SetFocus;
+
+end;
+
+procedure TForm1.N5Click(Sender: TObject);
+begin
+   RichEdit1.CopyToClipboard;
+end;
+
+procedure TForm1.N6Click(Sender: TObject);
+begin
+   if SaveDialog1.Execute then
+   RichEdit1.Lines.SaveToFile(SaveDialog1.FileName);
+end;
+
+procedure TForm1.N7Click(Sender: TObject);
+begin
+Form1.Close;
+end;
+
+procedure TForm1.N9Click(Sender: TObject);
+begin
+ If RichEdit1.WordWrap then
+ begin
+ RichEdit1.WordWrap:=false;
+ RichEdit1.ScrollBars:=ssBoth;
+ N9.Checked:=False;
+ end
+ else
+ begin
+ RichEdit1.WordWrap:=True;
+ RichEdit1.ScrollBars:=ssVertical;
+ N9.Checked:=True;
+ end;
+
+end;
+
+end.

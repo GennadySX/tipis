@@ -1,0 +1,29 @@
+program Project2;
+
+uses
+  Forms,
+  Main in 'Main.pas' {Form1},
+  Photos in 'Photos.pas' {Form3},
+  About in 'About.pas' {Form4},
+  Editor in 'Editor.pas' {Form5},
+  Img3 in 'Img3.pas' {ImgForm3},
+  Img2 in 'Img2.pas' {ImgForm2},
+  Img1 in 'Img1.pas' {ImgForm1},
+  Cascade2 in '14\Cascade2.pas' {CascadeForm2},
+  Cascade1 in '14\Cascade1.pas' {CascadeForm1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TImgForm3, ImgForm3);
+  Application.CreateForm(TImgForm2, ImgForm2);
+  Application.CreateForm(TImgForm1, ImgForm1);
+  Application.CreateForm(TCascadeForm2, CascadeForm2);
+  Application.CreateForm(TCascadeForm1, CascadeForm1);
+  Application.Run;
+end.

@@ -1,0 +1,60 @@
+object MDIForm: TMDIForm
+  Left = 0
+  Top = 0
+  Caption = 'MDIForm'
+  ClientHeight = 231
+  ClientWidth = 505
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIForm
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 88
+    Top = 48
+    object N1: TMenuItem
+      Caption = #1060#1072#1081#1083' '
+      object N2: TMenuItem
+        Caption = #1057#1086#1079#1076#1072#1090#1100' '#1085#1086#1074#1086#1077' '#1086#1082#1085#1086
+        OnClick = N2Click
+      end
+      object N3: TMenuItem
+        Caption = #1042#1099#1093#1086#1076' '
+        OnClick = N3Click
+      end
+    end
+    object N4: TMenuItem
+      Caption = #1056#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1077' '#1086#1082#1086#1085
+      object N5: TMenuItem
+        Action = WindowCascade1
+      end
+      object N6: TMenuItem
+        Action = WindowTileVertical1
+      end
+    end
+  end
+  object ActionList1: TActionList
+    Left = 208
+    Top = 48
+    object WindowCascade1: TWindowCascade
+      Category = 'Window'
+      Caption = '&Cascade'
+      Enabled = False
+      Hint = 'Cascade'
+      ImageIndex = 17
+    end
+    object WindowTileVertical1: TWindowTileVertical
+      Category = 'Window'
+      Caption = '&Tile Vertically'
+      Enabled = False
+      Hint = 'Tile Vertical'
+      ImageIndex = 16
+    end
+  end
+end

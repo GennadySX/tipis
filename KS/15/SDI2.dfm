@@ -1,0 +1,30 @@
+object SDIForm2: TSDIForm2
+  Left = 0
+  Top = 0
+  Caption = 'SDIForm2'
+  ClientHeight = 275
+  ClientWidth = 449
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 384
+    Top = 24
+    object N1: TMenuItem
+      Caption = #1060#1091#1085#1082#1094#1080#1103
+    end
+    object N2: TMenuItem
+      Caption = #1055#1088#1072#1074#1082#1072
+    end
+    object N3: TMenuItem
+      Caption = #1042#1099#1093#1086#1076
+    end
+  end
+end

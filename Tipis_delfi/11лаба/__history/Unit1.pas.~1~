@@ -1,0 +1,50 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus, StdCtrls, ComCtrls;
+
+type
+  TForm1 = class(TForm)
+    RichEdit1: TRichEdit;
+    MainMenu1: TMainMenu;
+    N1: TMenuItem;
+    N2: TMenuItem;
+    N3: TMenuItem;
+    N4: TMenuItem;
+    N5: TMenuItem;
+    N6: TMenuItem;
+    OpenDialog1: TOpenDialog;
+    SaveDialog1: TSaveDialog;
+    N7: TMenuItem;
+    N8: TMenuItem;
+    N10: TMenuItem;
+    FontDialog1: TFontDialog;
+    N11: TMenuItem;
+    N12: TMenuItem;
+    N9: TMenuItem;
+    N13: TMenuItem;
+    procedure N2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.N2Click(Sender: TObject);
+begin
+        if opendialog1.Execute then
+        richedit1.Lines.LoadFormFile(OpenDialog1.FileName);
+
+end;
+
+end.

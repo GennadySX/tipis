@@ -1,0 +1,55 @@
+unit Unit1;
+
+interface 
+
+uses 
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, 
+Dialogs, ActnList, Menus, StdActns, StdCtrls; 
+
+type 
+TForm1 = class(TForm)
+MainMenu1: TMainMenu; 
+N1: TMenuItem; 
+N2: TMenuItem; 
+N3: TMenuItem; 
+N4: TMenuItem; 
+N5: TMenuItem; 
+N6: TMenuItem; 
+ActionList1: TActionList; 
+WindowCascade1: TWindowCascade; 
+WindowTileVertical1: TWindowTileVertical; 
+procedure N3Click(Sender: TObject); 
+procedure N2Click(Sender: TObject); 
+
+private 
+{ Private declarations } 
+procedure CreateChildForm(const childName: string); 
+public 
+{ Public declarations } 
+end; 
+
+var 
+Form1: TForm1;
+
+implementation 
+
+{$R *.dfm} 
+uses Unit2;
+procedure TForm1.CreateChildForm (const childName: string);
+var Child:TForm2;
+begin 
+Child:= TForm2.Create(Application);
+Child.Caption:= childName; 
+end; 
+
+procedure TForm1.N2Click(Sender: TObject);
+begin 
+CreateChildForm('Окно №'+IntToStr(MDIChildCount+1)); 
+end; 
+
+procedure TForm1.N3Click(Sender: TObject);
+begin 
+Application.Terminate; 
+end; 
+
+end.
